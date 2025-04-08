@@ -1,0 +1,19 @@
+service: generic-service
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+
+functions:
+  executeService:
+    handler: src/infrastructure/lambdaHandler.handler
+    events:
+      - http:
+          path: execute
+          method: get
+          request:
+            parameters:
+              querystrings:
+                input: true
+

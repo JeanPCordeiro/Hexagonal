@@ -1,0 +1,4 @@
+{
+  "target": "aws-lambda", // Options: "aws-lambda", "aws-eks"
+  "dockerImage": "myJPCfactorial"
+}
