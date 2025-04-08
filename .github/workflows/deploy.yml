@@ -28,12 +28,12 @@ jobs:
       run: npm install
 
     - name: Deploy to AWS Lambda
-      if: env.TARGET == 'aws-lambda'
+      if: ${{ env.TARGET == 'aws-lambda' }}
       run: npx serverless deploy
       working-directory: serverless/aws-lambda
 
     - name: Deploy to AWS EKS
-      if: env.TARGET == 'aws-eks'
+      if: ${{ env.TARGET == 'aws-eks' }}
       steps:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
