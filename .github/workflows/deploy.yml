@@ -68,4 +68,3 @@ jobs:
         run: |
           sed -i "s|YOUR_DOCKER_IMAGE|${{ env.DOCKER_IMAGE }}|g" k8s-deployment.yml
           kubectl apply -f k8s-deployment.yml
-
