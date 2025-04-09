@@ -1,4 +1,4 @@
-const performLogic = require('../domain/logic');
+import { performLogic } from '../domain/logic';
 
 function executeService(input) {
     return performLogic(input);

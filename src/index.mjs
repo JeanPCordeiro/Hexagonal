@@ -1,4 +1,4 @@
-const { executeService } = require('./application/service');
+import { executeService } from './application/service';
 
 exports.handler = async (event) => {
     const input = event.queryStringParameters.input;
