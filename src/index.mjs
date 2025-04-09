@@ -1,4 +1,4 @@
-import { executeService } from './application/service';
+import { executeService } from './application/service.js';
 
 exports.handler = async (event) => {
     const input = event.queryStringParameters.input;

@@ -1,4 +1,4 @@
-import { performLogic } from '../domain/logic';
+import { performLogic } from '../domain/logic.js';
 
 function executeService(input) {
     return performLogic(input);
