@@ -20,4 +20,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-2
       - run: zip -r lambda1.zip ./src/
-      - run: aws lambda update-function-code --function-name=lambda1 --zip-file=fileb://lambda1.zip
+      - run: aws lambda create-function --function-name=lambda1 --zip-file=fileb://lambda1.zip
