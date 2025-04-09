@@ -13,11 +13,11 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
       - uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-2
       - run: zip -r lambda1.zip ./src/
-      - run: aws lambda create-function --function-name=lambda1 --zip-file=fileb://lambda1.zip --role arn:aws:iam::060795913925:role/roleLambda
+      - run: aws lambda create-function --runtime nodejs18.x --function-name=lambda1 --zip-file=fileb://lambda1.zip --role arn:aws:iam::060795913925:role/roleLambda
