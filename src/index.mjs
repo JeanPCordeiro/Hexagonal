@@ -1,4 +1,5 @@
-import { executeService } from './application/service.js';
+import pkg from './application/service.js';
+const { executeService } = pkg;
 
 exports.handler = async (event) => {
     const input = event.queryStringParameters.input;
