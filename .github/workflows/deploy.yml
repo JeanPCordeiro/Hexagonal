@@ -20,4 +20,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-2
       - run: zip -r lambda1.zip ./src/
-      - run: aws lambda create-function --runtime nodejs18.x --function-name=lambda1 --zip-file=fileb://lambda1.zip --role arn:aws:iam::060795913925:role/roleLambda
+      - run: aws lambda create-function --runtime nodejs18.x --handler src/infrastructure/lambdaHandler.js my-function.handler --function-name=lambda1 --zip-file=fileb://lambda1.zip --role arn:aws:iam::060795913925:role/roleLambda
