@@ -1,5 +1,4 @@
-import pkg from '../domain/logic.js';
-const { performLogic } = pkg;
+const performLogic = require('../domain/logic');
 
 function executeService(input) {
     return performLogic(input);
